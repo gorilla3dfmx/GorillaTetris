@@ -459,7 +459,7 @@ begin
 {$IFDEF AUDIO}
   FAudioPlayer := TGorillaFMODAudioManager.Create(Self);
   FAudioPlayer.AutoUpdate := true;
-  var LSoundItem := FAudioPlayer.LoadSoundItemFromFile(FAssetsPath + 'blocks_style.wav');
+  var LSoundItem := FAudioPlayer.LoadSoundItemFromFile(FAssetsPath + 'blocks_style.wav') as TGorillaFMODSoundItem;
   LSoundItem.Loop := true;
   LSoundItem.LoopCount := -1;
   LSoundItem.Play();
